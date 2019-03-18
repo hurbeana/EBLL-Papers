@@ -1,30 +1,73 @@
 \documentclass[12pt, a4paper]{article}
-
+\usepackage{helvet}
+\usepackage{anyfontsize}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx} 
+\usepackage{tabularx}
 \usepackage{fancyhdr}
-\usepackage{datetime}
+\usepackage[ddmmyy]{datetime}
 \usepackage{geometry}
-\geometry{a4paper, includehead, includefoot, top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm} 
 
+%%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\dateseparator}{.}
+\geometry{a4paper, includehead, includefoot, top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm} 
+\def\arraystretch{1.5}
 
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-%\setlength\headheight{80.0pt}
-%\addtolength{\textheight}{-80.0pt}
-\chead{\includegraphics[width=\textwidth]{header.png}}
-\fancyfoot[L]{\footnotesize Situation 1 - ebll19s - de}
+\setlength{\headheight}{26pt}
+\lhead{
+	\raisebox{-.2\height}{
+		\includegraphics{doc_images/EB.png}}
+	\textcolor{gray}{\LARGE\ \&}
+	\raisebox{-.3\height}{
+		\includegraphics[scale=0.6]{doc_images/LL.png}}
+	\hspace{.3cm}
+	\textbf{\color{SpringGreen}2019S}
+}
+\rhead{\scalebox{.7}[1.0]{\large\textbf{Informatikdidaktik \& transferable skills}}}
+\fancyfoot[L]{\footnotesize \bottomleftfooter}
 \fancyfoot[C]{\footnotesize \today\ // \currenttime}
 \fancyfoot[R]{\footnotesize \thepage}
+%%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%%%%%% INFOS %%%%%%%%%%%%%%%%%%%% 
+\newcommand{\authortext}{ENTER Author 1 \& Author 2}
+\newcommand{\situation}{ENTER Situation}
+
+\newcommand{\bottomleftfooter}{Situation 1 - ebll19s - de}
+%%%%%%%%%%%%%%%%%%%% INFOS %%%%%%%%%%%%%%%%%%%% 
 
 \begin{document}
+\begin{tabular}{l l} 
+Authors: & \textbf{\textcolor{blue}{\large\authortext}}\\ 
+Situation & \textbf{\textcolor{blue}{\large\situation}}
+\end{tabular}
 
-hello there hello there
-kmlmklm
-kmlmklkml
+\vspace{1em}
 
-\newpage
+\centerline{
+	\fcolorbox{white}{SpringGreen}{
+		\fontsize{21}{12} \selectfont 
+			Description of Situation / Triggers / Effects (table)}}
 
-kmlmklkml
-k
+\vspace{1em}
+
+\begin{table}[h!]
+	\begin{tabularx}{\textwidth}{|p{0.3cm}|p{3.5cm}|X|p{0.3cm}|}
+		\hline
+		1 & Spielfeld-Nummer                       &  &  \\
+		\hline
+		2 & Ausgangspunkt                          &  &  \\
+		\hline
+		3 & Wirkungen                              &  &  \\
+		\hline
+		4 & Differenzierung \newline (falls nötig) &  &  \\
+		\hline
+		5 & Auslöser                               &  &  \\
+		\hline
+	\end{tabularx}
+\end{table}
 \end{document}
