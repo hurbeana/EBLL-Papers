@@ -4,6 +4,7 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{graphicx} 
 \usepackage{tabularx}
+\usepackage{enumitem}
 \usepackage{fancyhdr}
 \usepackage[ddmmyy]{datetime}
 \usepackage{geometry}
@@ -58,15 +59,27 @@ Situation & \textbf{\textcolor{blue}{\large\situation}}
 \begin{table}[h!]
 	\begin{tabularx}{\textwidth}{|p{0.3cm}|p{3.5cm}|X|p{0.3cm}|}
 		\hline
-		1 & Spielfeld-Nummer                       &  &  \\
+		1 & Spielfeld-Nummer                       & 35 – 39 Universität &  \\
 		\hline
-		2 & Ausgangspunkt                          &  &  \\
+		2 & Ausgangspunkt                          & 
+		Der Student hat seine Prüfung schon zwei Mal nicht geschafft.
+		Nun bleiben ihm 3 weitere Versuche, zwei davon sind komissionell, die er erbetteln muss. (change this later) &  \\
 		\hline
-		3 & Wirkungen                              &  &  \\
+		3 & Wirkungen                              &
+		\begin{itemize}[noitemsep, topsep=0pt]
+			\item Student findet das Prüfungsfach immer schwerer (-9999 Motivationspunkte)
+			\item Student hat erhöhte Prüfungsangst und glaubt, dass der Erfolg immer unwahrscheinlicher ist (-9999 Motivationspunkte)
+			\item Student ist trotz aller Umstände standhaft und bekommt neuen Schwung bei dem nächsten Versuch (+9999 Motivationspunkte)
+		\end{itemize} &  \\
 		\hline
-		4 & Differenzierung \newline (falls nötig) &  &  \\
+		4 & Differenzierung \newline (falls nötig) & txt &  \\
 		\hline
-		5 & Auslöser                               &  &  \\
+		5 & Auslöser                               & 
+		\begin{itemize}[noitemsep, topsep=0pt]
+			\item Angst vor der nächsten Prüfung
+			\item Sozialer Druck vor Freunden/Familie
+		\end{itemize}
+  &  \\
 		\hline
 	\end{tabularx}
 \end{table}
