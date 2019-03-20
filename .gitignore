@@ -4,3 +4,6 @@
 *.log
 *.pdf
 *.synctex*
+*.bib.sav
+*.bbl
+*.blg
