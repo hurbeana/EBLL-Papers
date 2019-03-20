@@ -1,4 +1,5 @@
 \documentclass[12pt, a4paper]{article}
+\usepackage{lipsum}
 \usepackage{helvet}
 \usepackage{anyfontsize}
 \usepackage[dvipsnames]{xcolor}
@@ -8,6 +9,10 @@
 \usepackage{fancyhdr}
 \usepackage[ddmmyy]{datetime}
 \usepackage{geometry}
+\usepackage{cite}
+\usepackage[ngerman]{babel}
+\usepackage{bibgerm}
+
 
 %%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
 \renewcommand{\familydefault}{\sfdefault}
@@ -44,7 +49,7 @@
 \begin{document}
 \begin{tabular}{l l} 
 Authors: & \textbf{\textcolor{blue}{\large\authortext}}\\ 
-Situation & \textbf{\textcolor{blue}{\large\situation}}
+Situation: & \textbf{\textcolor{blue}{\large\situation}}
 \end{tabular}
 
 \vspace{1em}
@@ -87,11 +92,17 @@ Situation & \textbf{\textcolor{blue}{\large\situation}}
 			\item Sozialer Druck durch Kollegen/Freunden/Familie
 			\item Andere Prüfungen die nicht erfolgreich waren
 		\end{itemize}
-  &  \\
+		&  \\
 		\hline
 	\end{tabularx}
-	\newpage
-
-	
 \end{table}
+\newpage
+\section*{Theoretische Begründung der behaupteten Wirkung/en}
+	\lipsum[2-4]
+
+\newpage
+\section*{Empirische Belege für das Eintreten der behaupteten Wirkungen/en}
+	\lipsum[3-5]
+\bibliography{biblio}{}
+\bibliographystyle{plain}
 \end{document}
