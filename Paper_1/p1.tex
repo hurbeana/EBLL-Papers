@@ -12,14 +12,22 @@
 \usepackage{cite}
 \usepackage[ngerman]{babel}
 \usepackage{bibgerm}
+\usepackage{ragged2e}
 
 
 %%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
+%Dates
 \renewcommand{\familydefault}{\sfdefault}
 \renewcommand{\dateseparator}{.}
-\geometry{a4paper, includehead, includefoot, top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm} 
-\def\arraystretch{1.5}
 
+%Papersize
+\geometry{a4paper, includehead, includefoot, top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm} 
+
+%Tablestuff
+\def\arraystretch{1.5}
+\newcolumntype{L}{>{\RaggedRight} X}
+
+%Headers
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -62,29 +70,28 @@ Situation: & \textbf{\textcolor{blue}{\large\situation}}
 \vspace{1em}
 
 \begin{table}[h!]
-	\begin{tabularx}{\textwidth}{|p{0.3cm}|p{3.5cm}|X|p{0.3cm}|}
+	\begin{tabularx}{\textwidth}{|p{0.3cm}|p{3.5cm}|L|}
 		\hline
-		1 & Spielfeld-Nummer                       & 35 – 39 Universität &  \\
+		1 & Spielfeld-Nummer                       & 35 – 39 Universität \\
 		\hline
 		2 & Ausgangspunkt                          & 
 		Du hast eine wichtige Prüfung schon zum zweiten Mal nicht geschafft.
-		Nun bleiben dir nur noch 3 weitere Versuche, zwei davon sind kommissionell. &  \\
+		Nun bleiben dir nur noch 3 weitere Versuche, zwei davon sind kommissionell. \\
 		\hline
 		3 & Wirkungen                              &
 		Deine Reaktion darauf ist abhängig von deiner Persönlichkeit und vergangenen Erfahrungen:
 		\begin{itemize}[noitemsep, topsep=0pt]
-			\item {[1,2,3]} Du findest Prüfungsfach und Fachgebiet schwerer und unverständlicher (-1 Motivationspunkt).	Du hast erhöhte Prüfungsangst und glaubst, dass der Erfolg unwahrscheinlicher ist. (-1 Motivationspunkt)
-			\item {[4,5]} Vergangene Ergebnisse sind dir recht egal und du lernst für diese Prüfung ohne weitere Probleme (genauso wie für die ersten zwei Versuche). (+-0 Motivationspunkte)
-			\item {[6]} Trotz Rückschlage bist du entschlossen und beschließt dich für den nächsten Prüfungsantritt möglichst gut vorzubereiten um deine Erfolgschancen zu maximieren, indem du mehr Zeit investierst und z.B. eine Nachhilfe aufsuchst (+1 Motivationspunkt)
-		\end{itemize} &  \\
+			\item {[1,2,3]} Du findest Prüfungsfach und Fachgebiet schwerer und unverständlicher \texttt{(-1 Motivationspunkt)}. Du hast erhöhte Prüfungsangst und glaubst, dass der Erfolg unwahrscheinlicher ist. \texttt{(-1 Motivationspunkt)}
+			\item {[4,5]} Vergangene Ergebnisse sind dir recht egal und du lernst für diese Prüfung ohne weitere Probleme (genauso wie für die ersten zwei Versuche). \texttt{(+-0 Motivationspunkte)}
+			\item {[6]} Trotz Rückschlage bist du entschlossen und beschließt dich für den nächsten Prüfungsantritt möglichst gut vorzubereiten um deine Erfolgschancen zu maximieren, indem du mehr Zeit investierst und z.B. eine Nachhilfe aufsuchst \texttt{(+1 Motivationspunkt)}
+		\end{itemize} \\
 		\hline
 		4 & Differenzierung \newline (falls nötig) & 
 		\begin{itemize}[noitemsep, topsep=0pt]
-			\item Persönlichkeit
-			\item Soziales Umfeld
-			\item Finanzielle Mittel
-		\end{itemize}
-		&  \\
+			\item Persönlichkeit: \texttt{[Pessimist, Optimist]}
+			\item Soziales Umfeld: \texttt{[Eltern, Freunde]}
+			\item Finanzielle Mittel: \texttt{[(kein) Geld für Nachhilfe etc.]}
+		\end{itemize} \\
 		\hline
 		5 & Auslöser                               & 
 		\begin{itemize}[noitemsep, topsep=0pt]
@@ -92,8 +99,7 @@ Situation: & \textbf{\textcolor{blue}{\large\situation}}
 			\item Sozialer Druck durch Kollegen/Freunden/Familie
 			\item Andere Prüfungen die nicht erfolgreich waren
 			\item Generelles Interesse/Desinteresse an dem Fach
-		\end{itemize}
-		&  \\
+		\end{itemize} \\
 		\hline
 	\end{tabularx}
 \end{table}
