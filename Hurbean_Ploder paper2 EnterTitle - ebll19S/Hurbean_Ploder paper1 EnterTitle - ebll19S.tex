@@ -1,0 +1,123 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage{lipsum}
+\usepackage{blindtext}
+\usepackage{helvet}
+\usepackage{anyfontsize}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx} 
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[ddmmyy]{datetime}
+\usepackage{geometry}
+\usepackage{cite}
+\usepackage[ngerman]{babel}
+\usepackage{bibgerm}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+\usepackage[german]{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
+%Dates
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\dateseparator}{.}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.5em}
+
+%Papersize
+\geometry{a4paper, includehead, includefoot, top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm} 
+
+%Tablestuff
+\def\arraystretch{1.5}
+\newcolumntype{L}{>{\RaggedRight} X}
+
+%Headers
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{26pt}
+\lhead{
+	\raisebox{-.2\height}{
+		\includegraphics{doc_images/EB.png}}
+	\textcolor{gray}{\LARGE\ \&}
+	\raisebox{-.3\height}{
+		\includegraphics[scale=0.6]{doc_images/LL.png}}
+	\hspace{.3cm}
+	\textbf{\color{SpringGreen}2019S}
+}
+\rhead{\scalebox{.7}[1.0]{\large\textbf{Informatikdidaktik \& transferable skills}}}
+\fancyfoot[L]{\footnotesize \bottomleftfooter}
+\fancyfoot[C]{\footnotesize \today\ // \currenttime}
+\fancyfoot[R]{\footnotesize \thepage}
+%%%%%%%%%%%%%%%%%%%% PRÄAMBEL %%%%%%%%%%%%%%%%%%%% 
+
+%%%%%%%%%%%%%%%%%%%% INFOS %%%%%%%%%%%%%%%%%%%% 
+\newcommand{\authortext}{Hurbean Alexander \& Ploder Bernhard}
+\newcommand{\situation}{Enter Situation here}
+
+\newcommand{\bottomleftfooter}{Situation 2 - ebll19s - de}
+%%%%%%%%%%%%%%%%%%%% INFOS %%%%%%%%%%%%%%%%%%%% 
+
+\begin{document}
+\begin{tabular}{l l} 
+Authors: & \textbf{\textcolor{blue}{\large\authortext}}\\ 
+Situation: & \textbf{\textcolor{blue}{\large\situation}}
+\end{tabular}
+
+\vspace{1em}
+
+\centerline{
+	\fcolorbox{white}{SpringGreen}{
+		\fontsize{21}{12} \selectfont 
+			Description of Situation / Triggers / Effects (table)}}
+
+\vspace{1em}
+
+\begin{table}[h!]
+	\begin{tabularx}{\textwidth}{|p{0.3cm}|p{3.5cm}|L|}
+		\hline
+		1 & Spielfeld-Nummer                       & 35 – 39 Universität \\
+		\hline
+		2 & Ausgangspunkt                          & 
+		REPLACE HERE \\
+		\hline
+		3 & Wirkungen                              &
+		REPLACE HERE
+		\begin{itemize}[noitemsep, topsep=0pt]
+			\item {[1,2,3]} REPLACE HERE \texttt{(-3 Motivationspunkt)}
+			\item {[4,5]} REPLACE HERE \texttt{(-1 Motivationspunkte)}
+		\end{itemize} \\
+		\hline
+		4 & Differenzierung \newline (falls nötig) & 
+		\begin{itemize}[noitemsep, topsep=0pt]
+			\item UwU: \texttt{[Pessimist, Optimist]}
+			\item Soziales Umfeld: \texttt{[Eltern, Freunde]}
+			\item Finanzielle Mittel: \texttt{[(kein) Geld für Nachhilfe etc.]}
+		\end{itemize} \\
+		\hline
+		5 & Auslöser                               & 
+		\begin{itemize}[noitemsep, topsep=0pt]
+			\item Negative/Positive vergangene Erfahrungen mit dem Prüfungsfach
+			\item Sozialer Druck durch Kollegen/Freunden/Familie
+			\item Andere Prüfungen die nicht erfolgreich waren
+			\item Generelles Interesse/Desinteresse an dem Fach
+		\end{itemize} \\
+		\hline
+	\end{tabularx}
+\end{table}
+\newpage
+
+\section*{Theoretische Begründung der behaupteten Wirkung/en}
+\blindtext
+
+\newpage
+\section*{Empirische Belege für das Eintreten der behaupteten Wirkungen/en}
+
+\blindtext
+\newpage
+
+\bibliography{biblio}{}
+\bibliographystyle{alpha}
+
+\end{document}
